@@ -1,0 +1,26 @@
+{
+  "name": "urban-design-skills",
+  "version": "1.0.0",
+  "description": "15 specialized Claude Code skills for urban design covering site analysis, masterplanning, street design, public space design, sustainability scoring, zoning, transit-oriented development, and computational urban metrics. References 40+ theorists and frameworks including Kevin Lynch, Jane Jacobs, Christopher Alexander, Jan Gehl, Andres Duany, and standards from NACTO, ITDP, UN-Habitat, LEED-ND, BREEAM, and more.",
+  "author": {
+    "name": "Abhinav Bhardwaj",
+    "copyright": "Copyright (c) 2026 Abhinav Bhardwaj. All rights reserved."
+  },
+  "license": "MIT",
+  "keywords": [
+    "urban-design",
+    "architecture",
+    "masterplanning",
+    "sustainability",
+    "LEED-ND",
+    "NACTO",
+    "transit-oriented-development",
+    "street-design",
+    "public-space",
+    "zoning",
+    "form-based-codes",
+    "walkability",
+    "density",
+    "AEC"
+  ]
+}
