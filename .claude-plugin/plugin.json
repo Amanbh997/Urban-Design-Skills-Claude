@@ -1,7 +1,7 @@
 {
   "name": "urban-design-skills",
-  "version": "1.0.0",
-  "description": "15 specialized Claude Code skills for urban design covering site analysis, masterplanning, street design, public space design, sustainability scoring, zoning, transit-oriented development, and computational urban metrics. References 40+ theorists and frameworks including Kevin Lynch, Jane Jacobs, Christopher Alexander, Jan Gehl, Andres Duany, and standards from NACTO, ITDP, UN-Habitat, LEED-ND, BREEAM, and more.",
+  "version": "1.2.0",
+  "description": "18 specialized Claude Code skills for urban design covering site analysis, masterplanning, street design, public space design, sustainability scoring, zoning, transit-oriented development, mobility and transport planning, cost estimation, urban regeneration, and computational urban metrics. References 40+ theorists and frameworks including Kevin Lynch, Jane Jacobs, Christopher Alexander, Jan Gehl, Andres Duany, and standards from NACTO, ITDP, ITE, CROW, ICOMOS, UN-Habitat, LEED-ND, BREEAM, and more. Includes 7 Python calculators.",
   "author": {
     "name": "Abhinav Bhardwaj",
     "copyright": "Copyright (c) 2026 Abhinav Bhardwaj. All rights reserved."
@@ -21,6 +21,15 @@
     "form-based-codes",
     "walkability",
     "density",
-    "AEC"
+    "AEC",
+    "mobility",
+    "transport-planning",
+    "trip-generation",
+    "cost-estimation",
+    "feasibility",
+    "urban-regeneration",
+    "brownfield",
+    "adaptive-reuse",
+    "heritage"
   ]
 }

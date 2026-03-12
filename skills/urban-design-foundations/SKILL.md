@@ -305,6 +305,18 @@ When the conversation involves urban design topics, use this decision tree to de
 - If the task involves writing an urban design brief, design report, design and access statement, planning submission narrative, or competition entry document
 - **Action:** Invoke the `design-brief` skill for document structure templates, narrative frameworks, and professional report writing conventions
 
+**Mobility and Transport Planning**
+- If the task involves transport demand estimation, trip generation, mode split, traffic impact assessment, transit planning, cycling network design, freight servicing strategy, mobility hubs, pedestrian accessibility, vehicle-km traveled, or any movement and accessibility planning beyond individual street cross-sections
+- **Action:** Invoke the `mobility-and-transport` skill for trip generation tables, mode split frameworks, transit planning, cycling design standards, and transport impact assessment workflows
+
+**Cost Estimation and Development Feasibility**
+- If the task involves estimating construction cost, infrastructure budget, total development cost, cost per m2, cost per dwelling, project feasibility, value engineering, or comparing the cost of design alternatives
+- **Action:** Invoke the `cost-estimation` skill for building cost benchmarks, infrastructure costing, soft cost estimation, and financial feasibility analysis
+
+**Urban Regeneration and Brownfield Redevelopment**
+- If the task involves brownfield development, urban renewal, regeneration strategy, adaptive reuse, heritage-led regeneration, gentrification management, community engagement in development, vacant land activation, post-industrial redevelopment, meanwhile uses, neighborhood revitalization, infill intensification, or catalyst project design
+- **Action:** Invoke the `urban-regeneration` skill for brownfield remediation, heritage assessment, adaptive reuse feasibility, anti-gentrification tools, community engagement methodology, and regeneration delivery frameworks
+
 **Precise Metric Calculations**
 - If the task involves calculating specific urban metrics such as FAR, density, population yield, parking requirements, open space ratios, infrastructure capacity, or any quantitative urban design computation
 - **Action:** Invoke the `urban-calculator` skill for calculation formulas, unit conversion, benchmarking, and sensitivity analysis methods

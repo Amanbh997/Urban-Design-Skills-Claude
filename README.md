@@ -2,9 +2,9 @@
 
 ### A Claude Code Skills Plugin by Abhinav Bhardwaj
 
-15 interconnected skills covering urban design theory, quantitative standards, and computational tools. Draws from 40+ theorists, 6 sustainability certification systems, 5 international frameworks, and hundreds of numeric benchmarks. Includes 6 Python calculators for density, FAR, walkability, parking, green space, and block optimization.
+18 interconnected skills covering urban design theory, quantitative standards, and computational tools. Draws from 40+ theorists, 6 sustainability certification systems, 5 international frameworks, and hundreds of numeric benchmarks. Includes 7 Python calculators for density, FAR, walkability, parking, green space, block optimization, and cost estimation.
 
-**29,000+ lines** | **61 files** | **15 skills** | **6 Python calculators**
+**35,000+ lines** | **75 files** | **18 skills** | **7 Python calculators**
 
 ---
 
@@ -263,6 +263,71 @@ Transit-oriented development using **ITDP TOD Standard 3.0**:
 - **Parking management** - Maximum ratios, shared parking, park-and-ride sizing
 
 **Reference files:** `itdp-standard.md`, `tod-typologies.md`
+
+---
+
+#### `mobility-and-transport`
+
+**Invocation:** `/mobility-and-transport` or auto-activates on transport/mobility context
+
+Comprehensive mobility and transport planning:
+
+- **Trip generation tables** - ITE 11th Edition rates for 25+ land use types (residential, commercial, civic, hospitality)
+- **Mode split framework** - Target mode splits by 7 context types, 10 mode shift levers with evidence-based effectiveness
+- **Street network connectivity** - 6 metrics (intersection density, link-node ratio, route directness, cul-de-sac %)
+- **Transit planning** - Mode selection (metro/LRT/BRT/bus), coverage standards, stop spacing, station area design
+- **Cycling network design** - CROW 5 requirements, infrastructure selection by road context, parking standards
+- **Pedestrian accessibility** - Walking catchments, Fruin pedestrian LOS, crossing standards
+- **Freight and servicing** - Delivery rates by use, loading bay standards, last-mile solutions
+- **Mobility hubs** - 3-tier hub typology with sizing standards
+- **Transport impact assessment** - 6-step workflow from baseline to monitoring
+- **TDM toolkit** - 10 demand management strategies with effectiveness ranges
+
+**Reference files:** `trip-generation.md`, `transit-planning.md`, `cycling-design.md`
+
+---
+
+#### `cost-estimation`
+
+**Invocation:** `/cost-estimation` or auto-activates on cost/budget/feasibility context
+
+Development cost estimation and financial feasibility:
+
+- **Building construction cost** - $/m2 GFA for 20+ building types at 4 specification levels (low/medium/high/premium)
+- **Regional cost adjustment** - 16 regional multipliers from India (0.35x) to Northern Europe (1.45x)
+- **Height premium** - Cost multipliers from 1-3 floors (1.0x) to 60+ floors (2.0-2.5x)
+- **Sustainability premium** - Additional cost for LEED Silver through Net Zero
+- **Infrastructure costs** - Roads, utilities, transit, green infrastructure per linear meter
+- **Soft costs** - Professional fees, contingency, finance, marketing by percentage
+- **Total development cost assembly** - Full cost stack methodology
+- **Revenue and feasibility** - Residual land value, profit on cost, yield on cost tests
+- **Value engineering** - 10 strategies ranked by saving potential
+- **Phased costing** - Infrastructure triggers by dwelling count
+- **Exemplar project benchmarks** - 8 real projects with $/m2 and $/dwelling data
+
+**Scripts:** `cost_estimator.py` (Python calculator with 16 regional profiles)
+**Reference files:** `construction-costs.md`, `infrastructure-costs.md`, `feasibility-analysis.md`
+
+---
+
+#### `urban-regeneration`
+
+**Invocation:** `/urban-regeneration` or auto-activates on brownfield/regeneration context
+
+Urban regeneration, brownfield redevelopment, and heritage-led renewal:
+
+- **Regeneration context classifier** - Decision tree routing to brownfield, heritage-led, neighborhood revitalization, adaptive reuse, or infill pathway
+- **Brownfield remediation** - Contamination assessment phases, contaminant profiles by 12 previous use types, 10 remediation strategies with cost/duration
+- **Vacant land strategy** - 6 vacancy typologies, meanwhile/temporary use toolkit with 8 activation types
+- **Heritage-led regeneration** - 5-criterion significance assessment, character area appraisal (10 mapping layers), 8 conservation design principles
+- **Adaptive reuse** - Feasibility checklist (10 factors), conversion potential matrix (14 building types x 6 new uses), conversion cost premiums, 10 exemplar projects
+- **Neighborhood revitalization** - Decline diagnostic (5 categories), 8 revitalization strategies, catalyst project design methodology
+- **Anti-gentrification toolkit** - 10 displacement prevention tools, gentrification risk monitoring indicators
+- **Infill and intensification** - 6 infill site types, contextual design rules, 7 gentle density strategies
+- **Community engagement** - Stakeholder engagement ladder (5 levels), design charrette protocol
+- **Regeneration delivery** - 7 delivery models, phased delivery framework, 15 precedent projects
+
+**Reference files:** `brownfield-remediation.md`, `heritage-and-reuse.md`, `community-engagement.md`
 
 ---
 
@@ -563,6 +628,16 @@ skills/
 ├── tod-design/                    # Transit-oriented
 │   ├── SKILL.md                   # ITDP 8 principles, gradients
 │   └── references/                # Scoring, 8 TOD typologies
+├── mobility-and-transport/        # Mobility & transport
+│   ├── SKILL.md                   # Trip gen, mode split, transit, cycling
+│   └── references/                # ITE tables, transit planning, CROW cycling
+├── cost-estimation/               # Cost & feasibility
+│   ├── SKILL.md                   # Construction, infrastructure, soft costs
+│   ├── scripts/                   # Python: cost_estimator.py
+│   └── references/                # Construction, infrastructure, feasibility
+├── urban-regeneration/            # Regeneration & reuse
+│   ├── SKILL.md                   # Brownfield, heritage, adaptive reuse
+│   └── references/                # Remediation, heritage, community engagement
 ├── climate-responsive-design/     # Climate
 │   ├── SKILL.md                   # 4 zones, heat island, comfort
 │   └── references/                # Zone strategies, mitigation
@@ -615,6 +690,15 @@ These demonstrate how skills auto-activate - no slash commands needed:
 
 "Evaluate this public space design using Gehl's criteria"
   → design-evaluation fires with 30-criteria scorecard
+
+"What mode split should I target for this TOD neighborhood?"
+  → mobility-and-transport fires with mode split framework
+
+"Estimate the total development cost for 50,000m2 residential in the Gulf"
+  → cost-estimation fires and runs cost_estimator.py
+
+"How should I approach this derelict gas works site for redevelopment?"
+  → urban-regeneration fires with brownfield remediation pathway
 ```
 
 Slash commands for direct invocation:
@@ -636,13 +720,13 @@ Slash commands for direct invocation:
 
 | Metric | Count |
 |---|---|
-| Skills | 15 (interconnected with automatic routing) |
-| Total files | 61 |
-| Total content | 29,000+ lines |
-| SKILL.md files | 15 (~350-670 lines each) |
-| Reference files | 32 |
+| Skills | 18 (interconnected with automatic routing) |
+| Total files | 75 |
+| Total content | 35,000+ lines |
+| SKILL.md files | 18 (~350-670 lines each) |
+| Reference files | 41 |
 | Template files | 4 |
-| Python calculators | 6 |
+| Python calculators | 7 |
 | Theorists & frameworks | 40+ |
 | Certification systems | 6 (credit-level detail) |
 | Quantitative standards | 35+ (min/optimal/max values) |
@@ -651,6 +735,11 @@ Slash commands for direct invocation:
 | Block typologies | 15 |
 | Public space typologies | 12 |
 | TOD typologies | 8 |
+| Transit modes covered | 6 (metro, LRT, BRT, tram, bus, demand-responsive) |
+| Regional cost profiles | 16 |
+| Regeneration precedents | 15 |
+| Remediation strategies | 10 |
+| Adaptive reuse building types | 14 |
 
 ---
 

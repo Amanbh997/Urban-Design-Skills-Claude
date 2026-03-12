@@ -608,6 +608,9 @@ each as needed during the masterplan design process:
 - **urban-calculator**: quantitative verification and metrics (Step 11)
 - **sustainability-scoring**: sustainability performance assessment
 - **zoning-and-codes**: regulatory compliance verification
+- **mobility-and-transport**: transport demand, mode split, transit planning, TIA (Phase 4)
+- **cost-estimation**: development cost estimation and feasibility analysis (Phase 8)
+- **urban-regeneration**: brownfield, heritage-led, and adaptive reuse strategies (brownfield/infill contexts)
 
 ### How to Use References
 
